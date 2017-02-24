@@ -44,14 +44,16 @@ import org.camunda.bpm.engine.identity.Group;
 import org.camunda.bpm.engine.identity.User;
 import org.camunda.bpm.engine.impl.persistence.entity.AuthorizationEntity;
 import org.camunda.bpm.engine.task.TaskQuery;
+import org.springframework.stereotype.Component;
 
 /**
  * @author andreas.martin
  */
+@Component
 public class CamundaInitialDataGenerator {
 
     @Inject
-    ProcessEngine processEngine;
+    private ProcessEngine processEngine;
 
     private final static Logger LOGGER = Logger.getLogger(CamundaInitialDataGenerator.class.getName());
 

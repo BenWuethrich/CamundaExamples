@@ -32,9 +32,7 @@ public class InitialiseAdmissionCaseService implements JavaDelegate {
 
         LOGGER.info("initialiseAdmissionCase called!!!");
 
-        String currentDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(new Date());
-
-        execution.setVariable("mscbis_applicationHasDate", currentDate);
+        execution.setVariable("mscbis_applicationHasDate", new Date());
 
     }
 }
