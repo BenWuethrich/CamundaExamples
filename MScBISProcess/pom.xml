@@ -118,7 +118,7 @@
 
     <profiles>
         <profile>
-            <id>Camunda Spring Boot JAR</id>
+            <id>Camunda-Spring-Boot-JAR</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -146,7 +146,7 @@
             </build>
         </profile>
         <profile>
-            <id>Camunda Spring Boot WAR</id>
+            <id>Camunda-Spring-Boot-WAR</id>
             <properties>
                 <packaging.type>war</packaging.type>
             </properties>
