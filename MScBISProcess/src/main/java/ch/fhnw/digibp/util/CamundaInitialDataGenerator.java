@@ -251,6 +251,7 @@ public class CamundaInitialDataGenerator {
             Map<String, Object> filterProperties = new HashMap<String, Object>();
             filterProperties.put("description", "Tasks assigned to me");
             filterProperties.put("priority", -10);
+            filterProperties.put("refresh", true);
             TaskService taskService = processEngine.getTaskService();
             TaskQuery query = taskService.createTaskQuery().taskAssigneeExpression("${currentUser()}");
             Filter myTasksFilter = filterService.newTaskFilter().setName("My Tasks").setProperties(filterProperties).setOwner("demo").setQuery(query);
@@ -259,6 +260,7 @@ public class CamundaInitialDataGenerator {
             filterProperties.clear();
             filterProperties.put("description", "Tasks assigned to my Groups");
             filterProperties.put("priority", -5);
+            filterProperties.put("refresh", true);
             query = taskService.createTaskQuery().taskCandidateGroupInExpression("${currentUserGroups()}").taskUnassigned();
             Filter groupTasksFilter = filterService.newTaskFilter().setName("My Group Tasks").setProperties(filterProperties).setOwner("demo").setQuery(query);
             filterService.saveFilter(groupTasksFilter);
