@@ -117,7 +117,7 @@
     </bpmn:sequenceFlow>
     <bpmn:userTask id="UserTask_PrepareEligibilityCheck" name="Prepare eligibility check" camunda:formKey="embedded:app:forms/PrepareEligibilityCheck.html" camunda:candidateGroups="studyassistant">
       <bpmn:extensionElements>
-        <camunda:taskListener delegateExpression="#{eligibilityCheckService}" event="assignment" />
+        <camunda:taskListener expression="#{eligibilityCheckService}" event="assignment" />
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0827dng</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_13czb90</bpmn:incoming>

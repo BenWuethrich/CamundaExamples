@@ -46,7 +46,7 @@
       </cmmn:humanTask>
       <cmmn:milestone id="Milestone_1" name="Eligibility validated">
         <cmmn:extensionElements>
-          <camunda:caseExecutionListener event="occur" delegateExpression="#{caseMilestoneService}" />
+          <camunda:caseExecutionListener event="occur" expression="#{caseMilestoneService}" />
         </cmmn:extensionElements>
       </cmmn:milestone>
     </cmmn:casePlanModel>
